@@ -5,10 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="logo"
+        android:src="@mipmap/logo_round"/>
+
+    <EditText
+        android:id="@+id/naam"
+        android:hint="@string/Naam"
+        android:autofillHints="username"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textSize="20sp"
+        android:layout_marginTop="50dp"
+        android:background="@color/InputBox"
+        android:inputType="textPersonName"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/wachtwoord"
+        android:hint="@string/Wachtwoord"
+        android:autofillHints="password"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/InputBox"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Inloggen"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="Nog geen account? Klik dan hier!"
+        android:textSize="15sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Registreren"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp" />
 </LinearLayout>

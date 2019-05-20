@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NewYorker</string>
+    <string name="Naam">Naam</string>
+    <string name="Wachtwoord">Wachtwoord</string>
 </resources>

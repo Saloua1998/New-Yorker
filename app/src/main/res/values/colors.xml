@@ -3,4 +3,5 @@
     <color name="colorPrimary">#FD0000</color>
     <color name="colorPrimaryDark">#970000</color>
     <color name="colorAccent">#FFF</color>
+    <color name="InputBox">#DDD</color>
 </resources>
