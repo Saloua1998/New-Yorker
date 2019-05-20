@@ -10,13 +10,13 @@
     android:gravity="center">
 
     <ImageView
+        android:src="@mipmap/logo_round"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:contentDescription="logo"
-        android:src="@mipmap/logo_round"/>
+        android:contentDescription="logo"/>
 
     <EditText
-        android:id="@+id/naam"
+        android:id="@+id/name"
         android:hint="@string/Naam"
         android:autofillHints="username"
         android:layout_width="300dp"
@@ -25,21 +25,22 @@
         android:layout_marginTop="50dp"
         android:background="@color/InputBox"
         android:inputType="textPersonName"
-        android:textAlignment="center"/>
+        android:drawableStart="@mipmap/gebruiker"/>
 
     <EditText
-        android:id="@+id/wachtwoord"
+        android:id="@+id/password"
         android:hint="@string/Wachtwoord"
         android:autofillHints="password"
         android:inputType="textPassword"
         android:textSize="20sp"
-        android:textAlignment="center"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
+        android:drawableStart="@mipmap/lock"
         android:background="@color/InputBox"/>
 
     <Button
+        android:id="@+id/login"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@color/colorPrimaryDark"
@@ -50,16 +51,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nog geen account? Klik dan hier!"
+        android:text="Registreer Hier!"
         android:textSize="15sp"
         android:textColor="@color/colorAccent"
-        android:layout_marginTop="10dp" />
-
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:background="@color/colorPrimaryDark"
-        android:text="Registreren"
-        android:textSize="15sp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="20dp" />
 </LinearLayout>
