@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/gradient"
+    tools:context=".LoginActivity"
+    android:background="@drawable/gradientbg"
     android:orientation="vertical"
     android:gravity="center">
 
@@ -16,15 +16,15 @@
         android:contentDescription="logo"/>
 
     <EditText
-        android:id="@+id/name"
-        android:hint="@string/Naam"
-        android:autofillHints="username"
+        android:id="@+id/email"
+        android:hint="@string/Email"
+        android:autofillHints="email"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:textSize="20sp"
         android:layout_marginTop="50dp"
         android:background="@color/InputBox"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:drawableStart="@mipmap/gebruiker"/>
 
     <EditText
@@ -43,9 +43,10 @@
         android:id="@+id/login"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/gradientbtn"
         android:text="Inloggen"
         android:textSize="15sp"
+        android:textColor="@color/White"
         android:layout_marginTop="20dp" />
 
     <TextView
@@ -53,6 +54,6 @@
         android:layout_height="wrap_content"
         android:text="Registreer Hier!"
         android:textSize="15sp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/White"
         android:layout_marginTop="20dp" />
 </LinearLayout>

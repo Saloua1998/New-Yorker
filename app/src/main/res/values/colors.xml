@@ -2,6 +2,9 @@
 <resources>
     <color name="colorPrimary">#FD0000</color>
     <color name="colorPrimaryDark">#970000</color>
-    <color name="colorAccent">#FFF</color>
+    <color name="White">#FFF</color>
     <color name="InputBox">#DDD</color>
+
+    <color name="black">#000</color>
+    <color name="grey">#444</color>
 </resources>
