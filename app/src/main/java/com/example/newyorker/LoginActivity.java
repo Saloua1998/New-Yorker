@@ -8,14 +8,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.FirebaseDatabase;
+
 public class LoginActivity extends AppCompatActivity {
     private EditText Email, Password;
     private Button Login;
+    private FirebaseDatabase DBRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        FirebaseDatabase DBRef= FirebaseDatabase.getInstance();
+
+        DBRef = new FirebaseDatabase();
 
         Email = findViewById(R.id.email);
         Password = findViewById(R.id.password);

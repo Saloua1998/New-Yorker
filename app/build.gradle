@@ -26,7 +26,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+//    Firebase
     implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-database:17.0.0'       //database
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.0'     //crash report
+    implementation 'com.google.firebase:firebase-auth:17.0.0'           //store users
+
 }
 apply plugin: 'com.google.gms.google-services'
 
