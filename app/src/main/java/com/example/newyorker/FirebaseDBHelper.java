@@ -1,46 +1,44 @@
 package com.example.newyorker;
 
 import android.support.annotation.NonNull;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class FirebaseDBHelper {
-    private FirebaseDatabase DB;
-    private DatabaseReference RefClothes;
-    private List<Clothes> clothes = new ArrayList<>();
+    private FirebaseDatabase mDB;
+    private DatabaseReference mRefProducts;
+    private List<Products> products = new ArrayList<>();
 
 //    https://www.youtube.com/watch?v=eCfJMseN0-8
     public interface DataStatus{
-        void DataIsLoaded(List<Clothes> clothes, List<String> keys);
+        void DataIsLoaded(List<Products> products, List<String> keys);
         void DataInserted();
         void DataIsUpdated();
         void DataIsDeleted();
     }
 
     public FirebaseDBHelper() {
-        DB = FirebaseDatabase.getInstance();
-        RefClothes = DB.getReference("Clothes");
+        mDB = FirebaseDatabase.getInstance();
+        mRefProducts = mDB.getReference("Products");
     }
 
-    public void readClothes(final DataStatus dataStatus){
-        RefClothes.addValueEventListener(new ValueEventListener() {
+    public void readProducts(final DataStatus dataStatus){
+        mRefProducts.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                clothes.clear();
+                products.clear();
                 List<String> keys = new ArrayList<>();
                 for(DataSnapshot keyNode : dataSnapshot.getChildren()) {
                     keys.add(keyNode.getKey());
-                    Clothes clothe = keyNode.getValue(Clothes.class);
-                    clothes.add(clothe);
+                    Products products = keyNode.getValue(Products.class);
+                    FirebaseDBHelper.this.products.add(products);
                 }
-                dataStatus.DataIsLoaded(clothes, keys);
+                dataStatus.DataIsLoaded(products, keys);
             }
 
             @Override

@@ -19,9 +19,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        FirebaseDatabase DBRef= FirebaseDatabase.getInstance();
-
-        DBRef = new FirebaseDatabase();
+//        FirebaseDatabase DBRef= FirebaseDatabase.getInstance();
+//
+//        DBRef = new FirebaseDatabase();
 
         Email = findViewById(R.id.email);
         Password = findViewById(R.id.password);

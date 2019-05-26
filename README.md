@@ -1,2 +1,2 @@
 # New-Yorker
-App to buy clothes and shoes
+App to buy products and shoes
